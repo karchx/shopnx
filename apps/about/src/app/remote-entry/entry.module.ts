@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { RemoteEntryComponent } from './entry.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { remoteRoutes } from './entry.routes';
+import { HomeComponent } from './pages/home/home.component';
+
+import { UiModule } from '@shopnx/ui';
 
 @NgModule({
-  declarations: [RemoteEntryComponent, NxWelcomeComponent],
-  imports: [CommonModule, RouterModule.forChild(remoteRoutes)],
+  declarations: [HomeComponent],
+  imports: [CommonModule, UiModule, RouterModule.forChild(remoteRoutes)],
   providers: [],
 })
 export class RemoteEntryModule {}
