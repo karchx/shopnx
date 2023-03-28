@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "nx:all": "nx serve host --devRemotes=shop,about,cart"
+    "nx:all": "nx serve host --devRemotes=shop,about,cart",
+    "host:e2e": "nx e2e host-e2e --watch"
   },
   "private": true,
   "devDependencies": {
@@ -51,6 +52,7 @@
     "@angular/platform-browser": "~15.2.0",
     "@angular/platform-browser-dynamic": "~15.2.0",
     "@angular/router": "~15.2.0",
+    "http-server": "^14.1.1",
     "primeicons": "^6.0.1",
     "primeng": "^15.2.1",
     "rxjs": "~7.8.0",
