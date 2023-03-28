@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './common.component.html',
   styleUrls: ['./common.component.scss'],
 })
-export class CommonComponent {}
+export class CommonComponent {
+  sidebarVisible!: boolean;
+}

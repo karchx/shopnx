@@ -1,0 +1,8 @@
+<p-sidebar
+  [(visible)]="sidebarVisible"
+  id="sidebar"
+  (onHide)="hide()"
+  [dismissible]="false"
+>
+  <p-panelMenu [model]="items" [style]="{ width: '200px' }"></p-panelMenu>
+</p-sidebar>
