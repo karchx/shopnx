@@ -1,4 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
+import { UiModule } from '@shopnx/ui';
 
 import { HomeComponent } from './home.component';
 
@@ -8,6 +9,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [UiModule],
       declarations: [HomeComponent],
     }).compileComponents();
 
@@ -19,4 +21,14 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render title', fakeAsync(() => {
+    const fixture = TestBed.createComponent(HomeComponent);
+    // const router = TestBed.inject(Router);
+    // fixture.ngZone?.run(() => router.navigate(['/']));
+    // tick();
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Home');
+  }));
 });

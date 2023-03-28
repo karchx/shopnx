@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
   sidebarVisible!: boolean;
   items!: MenuItem[];
 
+  constructor() {}
+
   ngOnInit(): void {
     this.items = this.items = [
       {
